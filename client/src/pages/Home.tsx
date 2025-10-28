@@ -29,26 +29,28 @@ export default function Home() {
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
         
-        {/* HD BROOK BACKGROUND - OPTIMIZED WEBP */}
+        {/* HD BACKGROUND WITH MULTIPLE FORMATS FOR BROWSER COMPATIBILITY */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/assets/images/brook-hd.webp"
             alt="HD Brook - Flight Nest"
             fill
             priority
-            quality={90}
+            quality={100}
             className="object-cover object-center"
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
           />
         </div>
 
-        {/* DARK OVERLAY */}
-        <div className="absolute inset-0 z-1 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+        {/* ENHANCED DARK OVERLAY FOR BETTER TEXT READABILITY */}
+        <div className="absolute inset-0 z-1 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
 
         {/* ANIMATED PLANE */}
         <AnimatedHero />
 
-        {/* CONTENT - NO BUTTONS */}
+        {/* CONTENT - BUTTONS REMOVED */}
         <div className="relative z-20 text-center max-w-5xl mx-auto w-full">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-4 drop-shadow-2xl tracking-tight leading-tight">
             Your Journey Starts Here
@@ -57,7 +59,7 @@ export default function Home() {
             Discover seamless travel experiences with expert visa assistance, flight booking, and curated travel packages
           </p>
 
-          {/* BUTTONS REMOVED */}
+          {/* BUTTONS REMOVED AS REQUESTED */}
         </div>
 
         {/* SCROLL INDICATOR */}
@@ -75,7 +77,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* REST */}
+      {/* REST OF SECTIONS */}
       <PartnerAirlinesSlider />
       <QuickVisaChecker />
       <DestinationsSection />
