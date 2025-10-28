@@ -11,7 +11,6 @@ import PassportShowcase from "@/components/PassportShowcase";
 import InstagramGallery from "@/components/InstagramGallery";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -29,28 +28,19 @@ export default function Home() {
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
         
-        {/* HD BACKGROUND WITH MULTIPLE FORMATS FOR BROWSER COMPATIBILITY */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/assets/images/brook-hd.webp"
-            alt="HD Brook - Flight Nest"
-            fill
-            priority
-            quality={100}
-            className="object-cover object-center"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-            placeholder="blur"
-            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-          />
-        </div>
+        {/* BEACH BACKGROUND */}
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url('/assets/images/brook.webp')` }}
+        />
 
-        {/* ENHANCED DARK OVERLAY FOR BETTER TEXT READABILITY */}
-        <div className="absolute inset-0 z-1 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
+        {/* DARK OVERLAY */}
+        <div className="absolute inset-0 z-1 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
 
         {/* ANIMATED PLANE */}
         <AnimatedHero />
 
-        {/* CONTENT - BUTTONS REMOVED */}
+        {/* CONTENT */}
         <div className="relative z-20 text-center max-w-5xl mx-auto w-full">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-4 drop-shadow-2xl tracking-tight leading-tight">
             Your Journey Starts Here
@@ -59,7 +49,10 @@ export default function Home() {
             Discover seamless travel experiences with expert visa assistance, flight booking, and curated travel packages
           </p>
 
-          {/* BUTTONS REMOVED AS REQUESTED */}
+          {/* BUTTONS (Removed 'Start Your Journey' and 'Explore Services' buttons) */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+            {/* The buttons were here, now this div is empty or can be removed if not needed for other elements */}
+          </div>
         </div>
 
         {/* SCROLL INDICATOR */}
@@ -77,7 +70,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* REST OF SECTIONS */}
+      {/* REST */}
       <PartnerAirlinesSlider />
       <QuickVisaChecker />
       <DestinationsSection />
