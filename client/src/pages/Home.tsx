@@ -11,6 +11,7 @@ import PassportShowcase from "@/components/PassportShowcase";
 import InstagramGallery from "@/components/InstagramGallery";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -28,19 +29,26 @@ export default function Home() {
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
         
-        {/* BEACH BACKGROUND */}
-        <div 
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('/assets/images/brook.webp')` }}
-        />
+        {/* HD BROOK BACKGROUND - OPTIMIZED WEBP */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/assets/images/brook-hd.webp"
+            alt="HD Brook - Flight Nest"
+            fill
+            priority
+            quality={90}
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+        </div>
 
         {/* DARK OVERLAY */}
-        <div className="absolute inset-0 z-1 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+        <div className="absolute inset-0 z-1 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
 
         {/* ANIMATED PLANE */}
         <AnimatedHero />
 
-        {/* CONTENT */}
+        {/* CONTENT - NO BUTTONS */}
         <div className="relative z-20 text-center max-w-5xl mx-auto w-full">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-4 drop-shadow-2xl tracking-tight leading-tight">
             Your Journey Starts Here
@@ -49,15 +57,7 @@ export default function Home() {
             Discover seamless travel experiences with expert visa assistance, flight booking, and curated travel packages
           </p>
 
-          {/* BUTTONS */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-            <button className="w-full sm:w-auto px-8 py-4 bg-white text-blue-900 font-bold rounded-full hover:scale-105 transition shadow-xl text-base sm:text-lg min-w-[180px]">
-              Start Your Journey
-            </button>
-            <button className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-blue-900 transition text-base sm:text-lg min-w-[180px]">
-              Explore Services
-            </button>
-          </div>
+          {/* BUTTONS REMOVED */}
         </div>
 
         {/* SCROLL INDICATOR */}
