@@ -31,7 +31,7 @@ export default function Home() {
         {/* BEACH BACKGROUND */}
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('/assets/images/sunset.webp')` }}
+          style={{ backgroundImage: `url('/assets/images/brook.webp')` }}
         />
 
         {/* DARK OVERLAY */}
