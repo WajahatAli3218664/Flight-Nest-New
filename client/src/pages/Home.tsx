@@ -1,7 +1,7 @@
 // src/pages/Home.tsx
 import Navigation from "@/components/Navigation";
 import SEO from "@/components/SEO";
-import AnimatedHero from "@/components/AnimatedHero";
+
 import FlightBookingForm from "@/components/FlightBookingForm";
 import PartnerAirlinesSlider from "@/components/PartnerAirlinesSlider";
 import QuickVisaChecker from "@/components/QuickVisaChecker";
@@ -28,17 +28,21 @@ export default function Home() {
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
         
-        {/* BEACH BACKGROUND */}
-        <div 
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('/assets/images/blood.webp')` }}
-        />
+        {/* ANIMATED BACKGROUND SLIDER */}
+        <div className="absolute inset-0 z-0">
+          <div className="hero-slider">
+            <div className="slide" style={{ backgroundImage: `url('/generated_images/Tropical_beach_hero_background_a6af0b18.png')` }} />
+            <div className="slide" style={{ backgroundImage: `url('/generated_images/Dubai_skyline_destination_photo_907e43a6.png')` }} />
+            <div className="slide" style={{ backgroundImage: `url('/generated_images/Maldives_overwater_bungalows_destination_2f939fbd.png')` }} />
+            <div className="slide" style={{ backgroundImage: `url('/generated_images/Singapore_cityscape_destination_photo_f1272028.png')` }} />
+            <div className="slide" style={{ backgroundImage: `url('/generated_images/Thailand_temple_destination_photo_cca7d2f5.png')` }} />
+            <div className="slide" style={{ backgroundImage: `url('/generated_images/Europe_destination_photo_29a20b0f.png')` }} />
+            <div className="slide" style={{ backgroundImage: `url('/generated_images/Happy_travelers_at_airport_fda3a276.png')` }} />
+          </div>
+        </div>
 
         {/* DARK OVERLAY */}
         <div className="absolute inset-0 z-1 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
-
-        {/* ANIMATED PLANE */}
-        <AnimatedHero />
 
         {/* CONTENT */}
         <div className="relative z-20 text-center max-w-5xl mx-auto w-full">
