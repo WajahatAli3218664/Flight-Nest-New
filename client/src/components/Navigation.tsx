@@ -40,10 +40,10 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* LOGO */}
           <Link href="/" className="flex items-center gap-2 cursor-pointer">
-            <Plane 
-              className={`w-8 h-8 ${
-                isScrolled || !isHomePage ? "text-primary" : "text-white"
-              } drop-shadow-md`} 
+            <img 
+              src="/flight.png" 
+              alt="Flight Nest Logo" 
+              className="h-12 w-auto drop-shadow-md" 
             />
             <span 
               className={`text-2xl font-bold ${

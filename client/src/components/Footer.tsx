@@ -42,7 +42,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <Plane className="w-8 h-8" />
+              <img src="/flight.png" alt="Flight Nest Logo" className="h-8 w-auto" />
               <span className="text-2xl font-bold">Flight Nest</span>
             </div>
             <p className="text-primary-foreground/80 text-sm mb-4">
