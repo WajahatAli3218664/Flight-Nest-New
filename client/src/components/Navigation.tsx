@@ -122,7 +122,7 @@ export default function Navigation() {
                 variant="default"
                 className="rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-blue-900 font-bold shadow-lg hover:scale-105 transition"
               >
-                Get Started
+                Apply Now
               </Button>
             </Link>
           </div>
@@ -182,7 +182,7 @@ export default function Navigation() {
                   className="w-full rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-blue-900 font-bold"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Get Started
+                  Apply Now
                 </Button>
               </Link>
             </div>

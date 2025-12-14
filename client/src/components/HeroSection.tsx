@@ -50,8 +50,8 @@ export default function HeroSection() {
           </Button>
         </div>
 
-        <Card className="max-w-5xl mx-auto bg-background/95 backdrop-blur-md p-6 shadow-xl">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <Card className="max-w-4xl mx-auto bg-background/95 backdrop-blur-md p-6 shadow-xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="relative">
               <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
               <Input
@@ -69,22 +69,8 @@ export default function HeroSection() {
                 data-testid="input-departure-date"
               />
             </div>
-            <Select>
-              <SelectTrigger data-testid="select-visa-type">
-                <div className="flex items-center gap-2">
-                  <FileText className="w-4 h-4 text-muted-foreground" />
-                  <SelectValue placeholder="Visa Type" />
-                </div>
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="tourist">Tourist Visa</SelectItem>
-                <SelectItem value="business">Business Visa</SelectItem>
-                <SelectItem value="student">Student Visa</SelectItem>
-                <SelectItem value="work">Work Visa</SelectItem>
-              </SelectContent>
-            </Select>
             <Button
-              className="rounded-md"
+              className="rounded-md bg-gradient-to-r from-yellow-400 to-yellow-500 text-blue-900 font-bold hover:scale-105 transition"
               data-testid="button-search"
               onClick={() => console.log("Search clicked")}
             >

@@ -66,12 +66,16 @@ export default function Contact() {
       />
       <Navigation />
       
-      <div className="pt-20 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground py-16">
+      <div className="pt-20 bg-gradient-to-br from-blue-600 via-blue-500 to-yellow-400 text-white py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl text-primary-foreground/90 max-w-3xl">
-            Have questions? We're here to help with all your travel needs
-          </p>
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent drop-shadow-lg">
+              Contact Us
+            </h1>
+            <p className="text-xl md:text-2xl text-white/95 max-w-4xl mx-auto leading-relaxed">
+              Ready to start your journey? Get in touch with our travel experts for personalized assistance
+            </p>
+          </div>
         </div>
       </div>
 
@@ -81,14 +85,14 @@ export default function Contact() {
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-8">Get in Touch</h2>
               
-              <Card className="mb-8">
-                <CardHeader>
-                  <CardTitle>Send Us a Message</CardTitle>
-                  <CardDescription>
-                    Fill out the form and we'll get back to you as soon as possible
+              <Card className="mb-8 border-0 shadow-2xl bg-gradient-to-br from-white to-blue-50/50">
+                <CardHeader className="bg-gradient-to-r from-blue-600 to-yellow-400 text-white rounded-t-lg">
+                  <CardTitle className="text-2xl font-bold">Send Us a Message</CardTitle>
+                  <CardDescription className="text-blue-100">
+                    Fill out the form and we'll get back to you within 24 hours
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="p-8">
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                       <FormField
@@ -175,7 +179,7 @@ export default function Contact() {
                       <Button 
                         type="submit" 
                         size="lg" 
-                        className="w-full" 
+                        className="w-full bg-gradient-to-r from-blue-600 to-yellow-400 hover:from-blue-700 hover:to-yellow-500 text-white font-bold py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200" 
                         data-testid="button-submit"
                         disabled={contactMutation.isPending}
                       >
@@ -192,48 +196,47 @@ export default function Contact() {
                 <h2 className="text-3xl font-bold text-foreground mb-8">Contact Information</h2>
                 
                 <div className="space-y-6">
-                  <Card>
+                  <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <CardContent className="pt-6">
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <MapPin className="w-6 h-6 text-primary" />
+                        <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-yellow-400 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                          <MapPin className="w-6 h-6 text-white" />
                         </div>
                         <div>
                           <h3 className="font-semibold text-foreground mb-2">Office Address</h3>
                           <p className="text-muted-foreground">
-                            123 Travel Street, Suite 456<br />
-                            Downtown District<br />
-                            New York, NY 10001<br />
-                            United States
+                            3 Maryam Close<br />
+                            Rainham, England<br />
+                            RM13 9PE<br />
+                            United Kingdom
                           </p>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
 
-                  <Card>
+                  <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <CardContent className="pt-6">
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <Phone className="w-6 h-6 text-primary" />
+                        <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                          <Phone className="w-6 h-6 text-white" />
                         </div>
                         <div>
                           <h3 className="font-semibold text-foreground mb-2">Phone</h3>
                           <p className="text-muted-foreground">
-                            Main: +1 (800) 123-4567<br />
-                            WhatsApp: +1 (800) 123-4568<br />
-                            Toll-Free: 1-800-FLYNEST
+                            Main: +44 7380 406155<br />
+                            WhatsApp: +44 7380 406155
                           </p>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
 
-                  <Card>
+                  <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <CardContent className="pt-6">
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <Mail className="w-6 h-6 text-primary" />
+                        <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-yellow-300 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                          <Mail className="w-6 h-6 text-white" />
                         </div>
                         <div>
                           <h3 className="font-semibold text-foreground mb-2">Email</h3>
@@ -247,11 +250,11 @@ export default function Contact() {
                     </CardContent>
                   </Card>
 
-                  <Card>
+                  <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <CardContent className="pt-6">
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <Clock className="w-6 h-6 text-primary" />
+                        <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-blue-400 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                          <Clock className="w-6 h-6 text-white" />
                         </div>
                         <div>
                           <h3 className="font-semibold text-foreground mb-2">Business Hours</h3>
@@ -270,12 +273,15 @@ export default function Contact() {
 
               <div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">Visit Our Office</h3>
-                <Card className="overflow-hidden">
-                  <div className="h-64 bg-muted flex items-center justify-center">
-                    <p className="text-muted-foreground">Map Placeholder</p>
+                <Card className="overflow-hidden border-0 shadow-lg">
+                  <div className="h-64 bg-gradient-to-br from-blue-100 to-yellow-100 flex items-center justify-center">
+                    <div className="text-center">
+                      <MapPin className="w-16 h-16 text-blue-600 mx-auto mb-4" />
+                      <p className="text-blue-800 font-semibold text-lg">Interactive Map Coming Soon</p>
+                    </div>
                   </div>
-                  <CardContent className="pt-6">
-                    <p className="text-muted-foreground">
+                  <CardContent className="pt-6 bg-gradient-to-r from-blue-50 to-yellow-50">
+                    <p className="text-gray-700 font-medium">
                       Our office is located in the heart of downtown, easily accessible by public transport. Free parking is available for visitors.
                     </p>
                   </CardContent>

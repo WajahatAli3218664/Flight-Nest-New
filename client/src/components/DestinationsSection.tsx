@@ -43,9 +43,9 @@ export default function DestinationsSection() {
                   alt={destination.name}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-2xl font-bold text-primary-foreground">
+                  <h3 className="text-2xl font-bold text-white">
                     {destination.name}
                   </h3>
                 </div>
