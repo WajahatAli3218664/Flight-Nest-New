@@ -74,6 +74,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TRUSTPILOT REVIEW COLLECTOR */}
+      <section className="py-8 bg-background">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="693eadb8fde29e408a4da9e3" data-style-height="52px" data-style-width="100%" data-token="77105471-bcda-4518-9de6-e573a040d725">
+            <a href="https://www.trustpilot.com/review/flightss.netlify.app" target="_blank" rel="noopener">Trustpilot</a>
+          </div>
+        </div>
+      </section>
+
       {/* REST */}
       <PartnerAirlinesSlider />
       <QuickVisaChecker />
