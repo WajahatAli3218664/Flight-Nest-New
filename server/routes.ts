@@ -1,6 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
+import { sendContactEmail } from "./email";
 import { 
   insertContactSubmissionSchema, 
   insertVisaApplicationSchema,
@@ -12,6 +13,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const data = insertContactSubmissionSchema.parse(req.body);
       const submission = await storage.createContactSubmission(data);
+      
+      // Send email notification
+      try {
+        await sendContactEmail(data);
+      } catch (emailError) {
+        console.error("Failed to send email:", emailError);
+      }
+      
       res.json({ success: true, submission });
     } catch (error) {
       res.status(400).json({ success: false, error: "Invalid request data" });

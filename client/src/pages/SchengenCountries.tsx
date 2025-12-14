@@ -17,32 +17,32 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { insertVisaApplicationSchema, type InsertVisaApplication } from "@shared/schema";
 
 const schengenCountries = [
-  { name: "Austria", processingTime: "10-15 days", fee: "$80" },
-  { name: "Belgium", processingTime: "10-15 days", fee: "$80" },
-  { name: "Czech Republic", processingTime: "10-15 days", fee: "$80" },
-  { name: "Denmark", processingTime: "10-15 days", fee: "$80" },
-  { name: "Estonia", processingTime: "10-15 days", fee: "$80" },
-  { name: "Finland", processingTime: "10-15 days", fee: "$80" },
-  { name: "France", processingTime: "10-15 days", fee: "$80" },
-  { name: "Germany", processingTime: "10-15 days", fee: "$80" },
-  { name: "Greece", processingTime: "10-15 days", fee: "$80" },
-  { name: "Hungary", processingTime: "10-15 days", fee: "$80" },
-  { name: "Iceland", processingTime: "10-15 days", fee: "$80" },
-  { name: "Italy", processingTime: "10-15 days", fee: "$80" },
-  { name: "Latvia", processingTime: "10-15 days", fee: "$80" },
-  { name: "Liechtenstein", processingTime: "10-15 days", fee: "$80" },
-  { name: "Lithuania", processingTime: "10-15 days", fee: "$80" },
-  { name: "Luxembourg", processingTime: "10-15 days", fee: "$80" },
-  { name: "Malta", processingTime: "10-15 days", fee: "$80" },
-  { name: "Netherlands", processingTime: "10-15 days", fee: "$80" },
-  { name: "Norway", processingTime: "10-15 days", fee: "$80" },
-  { name: "Poland", processingTime: "10-15 days", fee: "$80" },
-  { name: "Portugal", processingTime: "10-15 days", fee: "$80" },
-  { name: "Slovakia", processingTime: "10-15 days", fee: "$80" },
-  { name: "Slovenia", processingTime: "10-15 days", fee: "$80" },
-  { name: "Spain", processingTime: "10-15 days", fee: "$80" },
-  { name: "Sweden", processingTime: "10-15 days", fee: "$80" },
-  { name: "Switzerland", processingTime: "10-15 days", fee: "$80" },
+  { name: "Austria", code: "AT", processingTime: "10-15 days" },
+  { name: "Belgium", code: "BE", processingTime: "10-15 days" },
+  { name: "Czech Republic", code: "CZ", processingTime: "10-15 days" },
+  { name: "Denmark", code: "DK", processingTime: "10-15 days" },
+  { name: "Estonia", code: "EE", processingTime: "10-15 days" },
+  { name: "Finland", code: "FI", processingTime: "10-15 days" },
+  { name: "France", code: "FR", processingTime: "10-15 days" },
+  { name: "Germany", code: "DE", processingTime: "10-15 days" },
+  { name: "Greece", code: "GR", processingTime: "10-15 days" },
+  { name: "Hungary", code: "HU", processingTime: "10-15 days" },
+  { name: "Iceland", code: "IS", processingTime: "10-15 days" },
+  { name: "Italy", code: "IT", processingTime: "10-15 days" },
+  { name: "Latvia", code: "LV", processingTime: "10-15 days" },
+  { name: "Liechtenstein", code: "LI", processingTime: "10-15 days" },
+  { name: "Lithuania", code: "LT", processingTime: "10-15 days" },
+  { name: "Luxembourg", code: "LU", processingTime: "10-15 days" },
+  { name: "Malta", code: "MT", processingTime: "10-15 days" },
+  { name: "Netherlands", code: "NL", processingTime: "10-15 days" },
+  { name: "Norway", code: "NO", processingTime: "10-15 days" },
+  { name: "Poland", code: "PL", processingTime: "10-15 days" },
+  { name: "Portugal", code: "PT", processingTime: "10-15 days" },
+  { name: "Slovakia", code: "SK", processingTime: "10-15 days" },
+  { name: "Slovenia", code: "SI", processingTime: "10-15 days" },
+  { name: "Spain", code: "ES", processingTime: "10-15 days" },
+  { name: "Sweden", code: "SE", processingTime: "10-15 days" },
+  { name: "Switzerland", code: "CH", processingTime: "10-15 days" },
 ];
 
 const requirements = [
@@ -151,9 +151,13 @@ export default function SchengenCountries() {
               {schengenCountries.map((country, index) => (
                 <Card key={index} className="hover-elevate transition-all">
                   <CardContent className="pt-6">
+                    <img 
+                      src={`https://flagcdn.com/w80/${country.code.toLowerCase()}.png`}
+                      alt={`${country.name} flag`}
+                      className="w-16 h-12 object-cover rounded mb-3"
+                    />
                     <h3 className="font-semibold text-foreground mb-2">{country.name}</h3>
                     <p className="text-sm text-muted-foreground">{country.processingTime}</p>
-                    <p className="text-sm text-primary font-semibold mt-1">{country.fee}</p>
                   </CardContent>
                 </Card>
               ))}
