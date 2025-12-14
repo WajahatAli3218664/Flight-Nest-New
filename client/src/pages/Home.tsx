@@ -76,8 +76,8 @@ export default function Home() {
 
       {/* TRUSTPILOT REVIEW COLLECTOR */}
       <section className="py-8 bg-background">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="693eadb8fde29e408a4da9e3" data-style-height="52px" data-style-width="100%" data-token="77105471-bcda-4518-9de6-e573a040d725">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="693eadb8fde29e408a4da9e3" data-style-height="52px" data-style-width="100%" data-token="8e622214-31b5-49dc-846f-ef51fa39070d">
             <a href="https://www.trustpilot.com/review/flightss.netlify.app" target="_blank" rel="noopener">Trustpilot</a>
           </div>
         </div>
