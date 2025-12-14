@@ -15,6 +15,11 @@ export async function sendContactEmail(data: {
   subject: string;
   message: string;
 }) {
+  console.log('Sending email with config:', {
+    user: process.env.EMAIL_USER,
+    hasPass: !!process.env.EMAIL_PASS
+  });
+  
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: process.env.EMAIL_USER,

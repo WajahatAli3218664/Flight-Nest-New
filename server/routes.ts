@@ -17,12 +17,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Send email notification
       try {
         await sendContactEmail(data);
+        console.log("Email sent successfully to:", process.env.EMAIL_USER);
       } catch (emailError) {
         console.error("Failed to send email:", emailError);
+        // Don't fail the request if email fails
       }
       
       res.json({ success: true, submission });
     } catch (error) {
+      console.error("Contact form error:", error);
       res.status(400).json({ success: false, error: "Invalid request data" });
     }
   });
