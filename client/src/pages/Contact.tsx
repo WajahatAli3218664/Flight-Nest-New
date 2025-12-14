@@ -31,11 +31,10 @@ export default function Contact() {
 
   const contactMutation = useMutation({
     mutationFn: async (data: InsertContactSubmission) => {
-      return await apiRequest("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      console.log('Submitting contact form:', data);
+      const response = await apiRequest("POST", "/api/contact", data);
+      console.log('Response:', response);
+      return response;
     },
     onSuccess: () => {
       toast({
@@ -44,7 +43,8 @@ export default function Contact() {
       });
       form.reset();
     },
-    onError: () => {
+    onError: (error) => {
+      console.error('Contact form error:', error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
